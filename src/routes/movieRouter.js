@@ -5,10 +5,10 @@ import authenticate from '../middlewares/autthenticate.js';
 const router = Router();
  
 
-router.get('/', authenticate, userController.getAllUsers);
-router.get('/:id', authenticate, userController.getUserById);
-router.post('/', authenticate, userController.createUser);
-router.put('/:id', authenticate, userController.updateUser);
-router.delete('/:id', authenticate, userController.deleteUser);
+router.get('/', userController.getAllUsers);
+router.get('/:id', userController.getUserById);
+router.post('/', userController.createUser);
+router.put('/:id', userController.updateUser);
+router.delete('/:id', userController.deleteUser);
  
 export default router;
